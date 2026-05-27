@@ -9,6 +9,6 @@ services:
   - type: web
     name: movicloud-web
     env: static
-    rootDir: .
+    rootDir: frontend
     buildCommand: npm install && npm run build
     staticPublishPath: dist
