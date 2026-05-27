@@ -6,8 +6,9 @@ services:
     rootDir: backend
     buildCommand: pip install -r requirements.txt
     startCommand: uvicorn app.main:app --host 0.0.0.0 --port 10000
-  - type: static
+  - type: web
     name: movicloud-web
+    env: static
     rootDir: .
     buildCommand: npm install && npm run build
     staticPublishPath: dist
